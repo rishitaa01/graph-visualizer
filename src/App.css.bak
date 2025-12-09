@@ -1,0 +1,70 @@
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #111;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.cy {
+  height: 450px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.btn.small {
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.edge-box input {
+  width: 60px;
+  padding: 4px;
+  margin-right: 6px;
+}
+
+.edge-box {
+  margin: 10px 0;
+}
+
+.algo-row input {
+  width: 60px;
+  padding: 4px;
+  margin-right: 8px;
+}
+
+.log {
+  background: #111;
+  color: #eee;
+  padding: 8px;
+  height: 200px;
+  border-radius: 6px;
+  overflow: auto;
+}
