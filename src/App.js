@@ -20,7 +20,7 @@ export default function App() {
       elements: [],
       style: [
         { selector: "node", style: { label: "data(label)", "text-valign": "center", "text-halign": "center", "background-color": "#3b82f6", width: 40, height: 40, color: "white" } },
-        { selector: "edge", style: { label: "data(weight)", "curve-style": "bezier", "target-arrow-shape": "triangle", "line-color": "#9ca3af", "target-arrow-color": "#9ca3af" } },
+        { selector: "edge[undirected = true]", style: { "target-arrow-shape": "none", "source-arrow-shape": "none", "curve-style": "bezier", "line-color": "#9ca3af" } },
         { selector: ".visited", style: { "background-color": "#f97316" } },
         { selector: ".frontier", style: { "background-color": "#fde68a" } }
       ],
@@ -48,7 +48,7 @@ export default function App() {
   function addEdge() {
     const u = edgeInputs.u, v = edgeInputs.v, w = edgeInputs.w;
     if (!nodes.some((n) => n.id === u) || !nodes.some((n) => n.id === v)) { alert("Both nodes must exist"); return; }
-    setEdges((s) => [...s, { id: `e${s.length}`, source: u, target: v, weight: w }]);
+    setEdges((s) => [...s,{ id: `e${s.length}`,source: u, target: v, weight: w,undirected: true}]);
     setEdgeInputs({ u: "", v: "", w: "1" });
   }
 
